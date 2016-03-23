@@ -1,0 +1,85 @@
+<%= form_for(@pizza_order) do |f| %>
+  <% if @pizza_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pizza_order.errors.count, "error") %> prohibited this pizza_order from being saved:</h2>
+
+      <ul>
+      <% @pizza_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :province %><br>
+    <%= f.text_field :province %>
+  </div>
+  <div class="field">
+    <%= f.label :postal_code %><br>
+    <%= f.text_field :postal_code %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :crust %><br>
+    <%= f.text_field :crust %>
+  </div>
+  <div class="field">
+    <%= f.label :sauce %><br>
+    <%= f.text_field :sauce %>
+  </div>
+  <div class="field">
+    <%= f.label :cheese %><br>
+    <%= f.text_field :cheese %>
+  </div>
+  <div class="field">
+    <%= f.label :toppings %><br>
+    <%= f.text_field :toppings %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :tax %><br>
+    <%= f.text_field :tax %>
+  </div>
+  <div class="field">
+    <%= f.label :total_tax %><br>
+    <%= f.text_field :total_tax %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
