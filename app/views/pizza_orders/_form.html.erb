@@ -52,7 +52,7 @@
         <div class="field">
             <!-- <%= f.label :size %><br>
              <%= f.text_field :size %>-->
-            <label for="size">Select your pizza size</label><br>
+            <div class="fieldLabel">Select your pizza size</div><br>
             <div class="field-body">
                 <%= f.radio_button("size", "Small", :value => "Small") %>
                 <%= label_tag(:Small, "Small") %>
@@ -67,7 +67,7 @@
         <div class="field">
             <!--  <%= f.label :crust %><br>
               <%= f.text_field :crust %>-->
-            <label for="crust">We have more crust options</label><br>
+            <div class="fieldLabel">We have more crust options</div><br>
             <div class="field-body">
                 <%= f.check_box( :crust, {}, "Stuffed crust", "Regular thin crust") %>
                 <%= label_tag(:crust, "Stuffed") %>
@@ -76,7 +76,7 @@
         <div class="field">
             <!-- <%= f.label :sauce %>
              <%= f.text_field :sauce %>-->
-            <label for="sauce">Try a different sauce</label><br>
+            <div class="fieldLabel">Try a different sauce</div><br>
             <div class="field-body">
                 <%= f.radio_button("sauce", "Pizza Sauce", :value => "Pizza Sauce") %>
                 <%= label_tag(:PizzaSauce, "Pizza Sauce") %>
@@ -92,23 +92,23 @@
         <div class="field">
             <!--<%= f.label :cheese %>
             <%= f.text_field :cheese %>-->
-            <label for="cheese">Wants to double the cheese?</label><br>
+            <div class="fieldLabel">Wants to double the cheese?</div><br>
             <div class="field-body">
                 <%= f.radio_button("cheese", "Light", :value => "Light") %>
-                <%= label_tag(:Light, "Light") %><br>
+                <%= label_tag(:Light, "Light") %>
                 <%= f.radio_button("cheese", "Normal", :value => "Normal") %>
-                <%= label_tag(:Normal, "Normal") %><br>
+                <%= label_tag(:Normal, "Normal") %>
                 <%= f.radio_button("cheese", "Extra", :value => "Extra") %>
-                <%= label_tag(:Extra, "Extra") %><br>
+                <%= label_tag(:Extra, "Extra") %>
                 <%= f.radio_button("cheese", "Double", :value => "Double") %>
-                <%= label_tag(:Double, "Double") %><br>
+                <%= label_tag(:Double, "Double") %>
             </div>
         </div>
         <div class="field">
-            <label> Select your favourite toppings</label><br>
+            <div class="fieldLabel"> Select your favourite toppings</div><br>
             <!--<%= f.label :toppings %><br> -->
             <div class="meatTopping">
-                <label>Meat toppings</label><br>
+                <div class="toppingLabel">Meat toppings</div><br>
                 <div class="field-body">
                     <%= check_box_tag 'pizza_order[toppings][]', 'Pepperoni', checked('Pepperoni'), id: 'Toppings_Pepperoni' %>
                     <%= label_tag 'Toppings_Pepperoni', 'Pepperoni' %>
@@ -123,11 +123,11 @@
                     <%= label_tag 'Toppings_Chicken', 'Chicken' %>
 
                     <%= check_box_tag 'pizza_order[toppings][]', 'Sausage', checked('Sausage'), id: 'Toppings_Sausage' %>
-                    <%= label_tag 'Toppings_Sausage', 'Sausage' %>
+                    <%= label_tag 'Toppings_Sausage', 'Sausage' %><br>
                 </div>
             </div>
             <div class="meatTopping">
-                <label> Veg toppings</label><br>
+                <div class="toppingLabel"> Veg toppings</div><br>
                 <div class="field-body">
                     <%= check_box_tag 'pizza_order[toppings][]', 'Green Olives', checked('Green Olives'), id: 'Toppings_GreenOlives' %>
                     <%= label_tag 'Toppings_GreenOlives', 'Green Olives' %>

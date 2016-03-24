@@ -21,16 +21,25 @@ body{
     padding: 20px 20px 20px 20px;
 }
 h1{
-    font-weight: bold;
-    font-size: 200%;
-}
-h1, h3{
+    font-family:Edwardian Script ITC;
+    font-size: 500%;
     color: #ffffe6;
+    text-shadow: 2px 2px #55552b;
+    font-weight:bold;
+	letter-spacing: 2px;
+}
+
+h3{
+    color: #ffffe6;
+    font-size: 150%;
+    font-style: italic;
 }
 h1, .section, .row, .fields, .userform{
     float: left;
 }
-
+.newOrder{
+     padding: 20px 20px 20px 20px;
+}
 .container, .header, .yeild{
     padding: 20px 20px 20px 20px;
     max-width: auto;
@@ -55,7 +64,17 @@ h1, .section, .row, .fields, .userform{
 .fields, .field, .summary, .listOrder{
     color: white;
 }
+.fieldLabel{
+    padding: 20px 10px 10px 10px;
+    color: #ffb31a;
+    font-family:Georgia;
+    font-size: 200%;
+}
 
+.toppingLabel{
+     padding: 10px 10px 10px 10px;
+     font-size: 140%;
+}
 .buttonlink, .actions submit{
     text-decoration: none;
 	border: none;
