@@ -2,7 +2,8 @@ class PizzaOrder < ActiveRecord::Base
         before_save do
         self.toppings.gsub!(/[\[\]\"]/, "") if attribute_present?('toppings')
     end
-    
+    validates :first_name, presence: true
+    validates :last_name, presence: true
     validates :size, presence: true
     validates :quantity, presence: true
     validates :address, presence: true, :length => { :minimum => 3}
@@ -20,60 +21,60 @@ class PizzaOrder < ActiveRecord::Base
     
      
     def Price 
-      @SizePrice = 0
+      @pizzaPrice = 0
       if self.size == "Small" 
-         @SizePrice = 5.00
+         @pizzaPrice = 5.00
          
       elsif self.size == "Medium" 
-         @SizePrice = 10.00
+         @pizzaPrice = 10.00
          
       elsif self.size == "Large" 
-         @SizePrice = 15.00
+         @pizzaPrice = 15.00
          
       elsif self.size == "Extra Large" 
-         @SizePrice = 20.00
+         @pizzaPrice = 20.00
       end 
       
       if (attribute_present?('toppings') && self.Crust == "Stuffed")
-         @SizePrice += 2
+         @pizzaPrice += 2
       end
       
       if attribute_present?('toppings')
           if(self.toppings.count(',') > 0)
-             @SizePrice += (self.toppings.count(',') * 0.5)
+             @pizzaPrice += (self.toppings.count(',') * 0.5)
           end
       end
       
       if(attribute_present?('quantity') && (self.quantity.is_a? Numeric))
-          @SizePrice *= self.quantity
+          @pizzaPrice *= self.quantity
       end
       
-      $prePrice = @SizePrice
+      $price = @pizzaPrice
       
       if(attribute_present?('province'))
           if self.province == "Manitoba"
-              @SizePrice += (@SizePrice * 0.10) 
-                $Tax = 0.10
+              @pizzaPrice += (@pizzaPrice * 0.10) 
+                $tax = 0.10
           end
           
           if self.province == "Ontario"
-              @SizePrice += (@SizePrice * 0.13) 
-              $Tax = 0.13
+              @pizzaPrice += (@pizzaPrice * 0.13) 
+              $tax = 0.13
           end
           
           if self.province == "Quebec"
-              @SizePrice += (@SizePrice * 0.11) 
-              $Tax = 0.11
+              @pizzaPrice += (@pizzaPrice * 0.11) 
+              $tax = 0.11
           end
           
           if self.province == "Saskatchewan"
-              @SizePrice += (@SizePrice * 0.15) 
-              $Tax = 0.15
+              @pizzaPrice += (@pizzaPrice * 0.15) 
+              $tax = 0.15
           end
       end
       
-      $Tax = $prePrice * $Tax
+      $total_amount = $price * $tax
       
-      return @SizePrice
+      return @pizzaPrice
     end 
 end

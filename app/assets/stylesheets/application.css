@@ -20,41 +20,55 @@ body{
     background-attachment: fixed;
     padding: 20px 20px 20px 20px;
 }
-
-h1,h3{
+h1{
+    font-weight: bold;
+    font-size: 200%;
+}
+h1, h3{
     color: #ffffe6;
-   
 }
-.container{
-    padding: 20px 20px 20px 20px;
-    max-width: 500px;
+h1, .section, .row, .fields, .userform{
+    float: left;
 }
 
-.section, .row{
+.container, .header, .yeild{
+    padding: 20px 20px 20px 20px;
+    max-width: auto;
+}
+
+.section, .row, .fields, .userform{
     position: relative;
     padding: 10px 10px 10px 10px;
-    float: left;
 }
 
 .row, .userform, .summary, .listOrder{
     background-color:rgba(0,0,0,0.7);
     padding: 10px 10px 10px 10px;
-}   
-.row, .userform, .summary{    
+}  
+
+.row, .userform, .summary, .listOrder, .header{    
     width: auto;
-    border:1px solid black;
-    margin: 60px 60px 60px 60px;
+    margin: 30px 30px 30px 30px;
 
 }
-.fields{
-    float:left;
-    padding: 10px 10px 10px 10px;
-}
+
 .fields, .field, .summary, .listOrder{
     color: white;
 }
-.userform{
-    float: left;
-    width:auto;
-    padding: 10px 10px 10px 10px;
+
+.buttonlink, .actions submit{
+    text-decoration: none;
+	border: none;
+    font-family: Calibri;
+	font-weight:bold;
+    color: black;
+    background-color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 17px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left:2%;
+    text-align: center;
+	float: right;
 }

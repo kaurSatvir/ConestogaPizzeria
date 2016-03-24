@@ -3,7 +3,6 @@
 <head>
   <title>Conestoga Pizzeria</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -11,17 +10,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1>Conestoga Pizzeria</h1>
-<div class="w3-section w3-row-padding w3-margin-64">
+<div class="header"> 
+<h1>Conestoga Pizzeria</h1>
+<div><%= link_to 'Order here', new_pizza_order_path, :class => 'buttonlink' %></div>
+<div >
   <%= if(user_signed_in?)
-                     link_to "Logout", destroy_user_session_path, :method => :delete, :class => 'btn btn-danger', :id => 'mycolor'
+                     link_to "Logout", destroy_user_session_path, :method => :delete, :class => 'buttonlink', :id => 'mycolor'
                    end %>
                    
                    <%= if(!user_signed_in?)
-                     link_to "Login", new_user_session_path, :class => 'btn btn-success', :id => 'mycolor'
+                     link_to "Login", new_user_session_path, :class => 'buttonlink'
                    end %>
+                   </div>
+                   </div> 
+<div class="yeild">
 <%= yield %>
-
 </div>
 </body>
 </html>

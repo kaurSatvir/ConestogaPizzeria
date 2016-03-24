@@ -1,25 +1,23 @@
 <p id="notice"><%= notice %></p>
 <div class="summary">
-<p>
-  Thank you <strong><%= @pizza_order.first_name %>  <%= @pizza_order.last_name %></strong>, your pizza will be delivered in 30mins.
-</p>
-<p>
-  <strong>Address:</strong> <%= @pizza_order.address %> <%= @pizza_order.city %><br>
-  <%= @pizza_order.province %> <%= @pizza_order.postal_code %><br>
-  <strong>Phone number:</strong> <%= @pizza_order.phone_number %><br>
-</p>
-
-<p> You ordered 
-  <strong> <%= @pizza_order.quantity %> <%= @pizza_order.size %> <%= @pizza_order.crust %></strong> pizza with <%= @pizza_order.sauce %> and <br>
-   <%= @pizza_order.cheese %>, <%= @pizza_order.toppings %>
-</p>
-
-<p> Total Price :
-  <strong><%= @pizza_order.total_amount %></strong>
-</p>
-
+    <p>
+        Thank you <strong><%= @pizza_order.first_name %>  <%= @pizza_order.last_name %></strong>, your pizza will be delivered in 30mins.
+    </p>
+    <p>
+        <strong>Address:</strong> <%= @pizza_order.address %> <%= @pizza_order.city %><br>
+        <%= @pizza_order.province %> <%= @pizza_order.postal_code %><br>
+        <strong>Phone number:</strong> <%= @pizza_order.phone_number %><br>
+    </p>
+    <p>
+        You ordered
+        <strong> <%= @pizza_order.quantity %> <%= @pizza_order.size %> <%= @pizza_order.crust %></strong> pizza with <%= @pizza_order.sauce %> and 
+        <%= @pizza_order.cheese %> cheese,<br>  <%= @pizza_order.toppings %>
+    </p>
+    <p>
+        Total Price :
+        <strong><%= @pizza_order.total_amount %></strong>
+    </p>
 </div>
 
-<%= link_to 'New Pizza order', new_pizza_order_path %>
 <%= link_to '', edit_pizza_order_path(@pizza_order) %> |
 <%= link_to '', pizza_orders_path %>
