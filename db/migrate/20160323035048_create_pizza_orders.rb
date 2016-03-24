@@ -17,7 +17,7 @@ class CreatePizzaOrders < ActiveRecord::Migration
       t.integer :quantity
       t.float :price
       t.float :tax
-      t.float :total_tax
+      t.float :total_amount
 
       t.timestamps null: false
     end

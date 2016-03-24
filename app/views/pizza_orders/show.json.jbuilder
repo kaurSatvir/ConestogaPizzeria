@@ -1,1 +1,1 @@
-json.extract! @pizza_order, :id, :first_name, :last_name, :email, :phone_number, :address, :city, :province, :postal_code, :size, :crust, :sauce, :cheese, :toppings, :quantity, :price, :tax, :total_tax, :created_at, :updated_at
+json.extract! @pizza_order, :id, :first_name, :last_name, :email, :phone_number, :address, :city, :province, :postal_code, :size, :crust, :sauce, :cheese, :toppings, :quantity, :price, :tax, :total_amount, :created_at, :updated_at
