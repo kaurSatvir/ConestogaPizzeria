@@ -20,10 +20,10 @@
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
-  <div class="fields">
+ <!-- <div class="fields">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
-  </div>
+  </div>-->
   <div class="fields">
     <%= f.label :phone_number %><br>
     <%= f.text_field :phone_number %>
@@ -55,13 +55,13 @@
     <label for="size">Select your pizza size</label><br>
     <div class="panel-body">
                       <%= f.radio_button("size", "Small", :value => "Small") %>
-                      <%= label_tag(:Small, "Small") %><br>
+                      <%= label_tag(:Small, "Small") %>
                       <%= f.radio_button("size", "Medium", :value => "Medium") %>
-                      <%= label_tag(:Medium, "Medium") %><br>
+                      <%= label_tag(:Medium, "Medium") %>
                       <%= f.radio_button("size", "Large", :value => "Large") %>
-                      <%= label_tag(:Small, "Large") %><br>
+                      <%= label_tag(:Small, "Large") %>
                       <%= f.radio_button("size", "Extra Large", :value => "Extra Large") %>
-                      <%= label_tag(:Medium, "Extra Large") %><br>
+                      <%= label_tag(:Medium, "Extra Large") %>
                     </div>
   </div>
   <div class="field">
@@ -69,7 +69,7 @@
     <%= f.text_field :crust %>-->
     <label for="crust">We have more crust options</label><br>
     <div class="panel-body">
-                      <%= f.check_box( :crust, {}, "Stuffed", "None") %>
+                      <%= f.check_box( :crust, {}, "Stuffed crust", "Regular thin crust") %>
                       <%= label_tag(:crust, "Stuffed") %>
                     </div>
   </div>
@@ -79,13 +79,13 @@
     <label for="sauce">Try a different sauce</label><br>
      <div class="panel-body">
                       <%= f.radio_button("sauce", "Pizza Sauce", :value => "Pizza Sauce") %>
-                      <%= label_tag(:PizzaSauce, "Pizza Sauce") %><br>
+                      <%= label_tag(:PizzaSauce, "Pizza Sauce") %>
                       <%= f.radio_button("sauce", "BBQ Sauce", :value => "BBQ Sauce") %>
-                      <%= label_tag(:BBQSauce, "BBQ Sauce") %><br>
+                      <%= label_tag(:BBQSauce, "BBQ Sauce") %>
                       <%= f.radio_button("sauce", "Alfredo Pasta Sauce", :value => "Alfredo Pasta Sauce") %>
-                      <%= label_tag(:AlfredoPasta, "Alfredo Pasta Sauce") %><br>
+                      <%= label_tag(:AlfredoPasta, "Alfredo Pasta Sauce") %>
                       <%= f.radio_button("sauce", "Garlic Parmesan Sauce", :value => "Garlic Parmesan Sauce") %>
-                      <%= label_tag(:GarlicParmesan, "Garlic Parmesan Sauce") %><br>
+                      <%= label_tag(:GarlicParmesan, "Garlic Parmesan Sauce") %>
                     </div>
   </div>
  
@@ -111,16 +111,16 @@
       <label>Meat toppings</label><br>
     <div class="panel-body">
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Pepperoni', checked('Pepperoni'), id: 'Toppings_Pepperoni' %>
-                                  <%= label_tag 'Toppings_Pepperoni', 'Pepperoni' %><br>
+                                  <%= label_tag 'Toppings_Pepperoni', 'Pepperoni' %>
                                   
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Beef', checked('Beef'), id: 'Toppings_Beef' %>
-                                  <%= label_tag 'Toppings_Beef', 'Beef' %><br>
+                                  <%= label_tag 'Toppings_Beef', 'Beef' %>
                                   
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Bacon', checked('Bacon'), id: 'Toppings_Bacon' %>
-                                  <%= label_tag 'Toppings_Bacon', 'Bacon' %><br>
+                                  <%= label_tag 'Toppings_Bacon', 'Bacon' %>
                                   
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Chicken', checked('Chicken'), id: 'Toppings_Chicken' %>
-                                  <%= label_tag 'Toppings_Chicken', 'Chicken' %><br>
+                                  <%= label_tag 'Toppings_Chicken', 'Chicken' %>
                                   
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Sausage', checked('Sausage'), id: 'Toppings_Sausage' %>
                                   <%= label_tag 'Toppings_Sausage', 'Sausage' %>
@@ -130,25 +130,25 @@
        <label> Veg toppings</label><br>
    <div class="panel-body">
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Green Olives', checked('Green Olives'), id: 'Toppings_GreenOlives' %>
-                                  <%= label_tag 'Toppings_GreenOlives', 'Green Olives' %><br>
+                                  <%= label_tag 'Toppings_GreenOlives', 'Green Olives' %>
                                    
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Black Olives', checked('Black Olives'), id: 'Toppings_BlackOlives' %>
-                                  <%= label_tag 'Toppings_BlackOlives', 'Black Olives' %><br>
+                                  <%= label_tag 'Toppings_BlackOlives', 'Black Olives' %>
                                   
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Green Pepper', checked('Green Pepper'), id: 'Toppings_GreenPepper' %>
-                                  <%= label_tag 'Toppings_GreenPepper', 'Green Pepper' %><br>
+                                  <%= label_tag 'Toppings_GreenPepper', 'Green Pepper' %>
                                  
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Pineapple', checked('Pineapple'), id: 'Toppings_Pineapple' %>
-                                  <%= label_tag 'Toppings_Pineapple', 'Pineapple' %><br>
+                                  <%= label_tag 'Toppings_Pineapple', 'Pineapple' %>
                                   
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Onion', checked('Onion'), id: 'Toppings_Onion' %>
-                                  <%= label_tag 'Toppings_Onion', 'Onion' %><br>
+                                  <%= label_tag 'Toppings_Onion', 'Onion' %>
                                   
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Tomatoes', checked('Tomatoes'), id: 'Toppings_Tomatoes' %>
-                                  <%= label_tag 'Toppings_Tomatoes', 'Tomatoes' %><br>
+                                  <%= label_tag 'Toppings_Tomatoes', 'Tomatoes' %>
                                   
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Jalapeno Peppers', checked('Jalapeno Peppers'), id: 'Toppings_JalapenoPeppers' %>
-                                  <%= label_tag 'Toppings_JalapenoPeppers', 'Jalapeno Peppers' %><br>
+                                  <%= label_tag 'Toppings_JalapenoPeppers', 'Jalapeno Peppers' %>
                                   
                                   <%= check_box_tag 'pizza_order[toppings][]', 'Mushroom', checked('Mushroom'), id: 'Toppings_Mushroom' %>
                                   <%= label_tag 'Toppings_Mushroom', 'Mushroom' %>
@@ -160,23 +160,15 @@
 
   
   <div class="row">
-    <h3>Your order</h3><br>
+    <h3>How many pizzas?</h3><br>
+    <h3>Quantity</h3>
   <div class="field">
-    <%= f.label :quantity %><br>
-    <%= f.number_field :quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :tax %><br>
-    <%= f.text_field :tax %>
-  </div>
-  <div class="field">
-    <%= f.label :total_amount %><br>
-    <%= f.text_field :total_amount %>
-  </div>
+     <fieldset class="form-group">
+        <!-- # <%= select_tag(:quantity,options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10]], 1), :class => 'form-control' ) %>
+			  --><%= f.number_field :quantity, {:min => 1, :max =>20, :class => 'form-control'} %>
+			</fieldset>
+  </div> 
+
   <div class="actions">
     <%= f.submit %>
   </div>
